@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-3">
+   
+      <div class="bg-light border-right" id="sidebar-wrapper " style="height: 100%;">
+        <div class="sidebar-heading justify-content-center " style="text-align: center;" [routerLink]="['/administrateur/graph']"><img
+            src="https://1.bp.blogspot.com/-vCo0bRpCyg4/YEJNrvcBzwI/AAAAAAABxoo/Su7GNBtIbN0VixmnrhmMRGpkHOfCfmsCwCLcBGAsYHQ/w400-h400/logo.png"
+            width="35%" height="20%"> </div>
+        <div class="list-group list-group-flush">
+          <a [routerLink]="['/administrateur/marque']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des Marques</b></a>
+  
+          <a [routerLink]="['/administrateur/modele']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion des modeles</b></a>
+
+          <a [routerLink]="['/administrateur/carburant']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestions Des carburants</b></a>
+
+          <a [routerLink]="['/administrateur/carousserie']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des carrousserie</b></a>
+
+          <a [routerLink]="['/administrateur/transmission']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des transmission</b></a>
+
+          <a [routerLink]="['/administrateur/version']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des versions</b></a>
+
+          <a [routerLink]="['/administrateur/vim']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des Images de version</b></a>
+
+          <a [routerLink]="['/administrateur/annonce']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des Annonces</b></a>
+
+          <a [routerLink]="['/administrateur/pays']" routerLinkActive="router-link-active"
+            class="list-group-item list-group-item-action bg-light"><b>Gestion Des Pays</b></a>
+
+
+  
+  
+        </div>
+      </div>
+  
+  
+      <!-- /#page-content-wrapper -->
+  
+    </div>
+    <!-- /#wrapper -->
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+  
+    </script>
+    <div class="col-9">
+      <main>
+  
+  
+        <router-outlet></router-outlet>
+  
+      </main>
+    </div>
+  </div>
+  
