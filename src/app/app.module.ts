@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
-import { TestComponent } from './test/test.component';
+//import { TestComponent } from './test/test.component';
 import { LogintestComponent } from './logintest/logintest.component';
 import { TestdeuxComponent } from './testdeux/testdeux.component';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
+   // TestComponent,
     LogintestComponent,
     TestdeuxComponent
   ],

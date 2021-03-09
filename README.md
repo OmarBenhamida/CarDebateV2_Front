@@ -4,8 +4,12 @@ git config --global user.name "OmarBenhamida"
 git config --global user.email "omar.benhamida@outlook.com"
 git init
 git remote add origin https://github.com/OmarBenhamida/CarDebateV2_Front.git
+<<<<<<< HEAD
 git add .
 git commit -m "first"
+=======
+git commit -m "first2"
+>>>>>>> eb9143cae6679137e8fd7795ff6224a569d0a58c
 git push
 
 git clone https://github.com/OmarBenhamida/CarDebateV2_Front.git
