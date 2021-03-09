@@ -3,10 +3,14 @@ git config --global user.name "OmarBenhamida"
 
 git config --global user.email "omar.benhamida@outlook.com"
 git init
-git add .
 git remote add origin https://github.com/OmarBenhamida/CarDebateV2_Front.git
+git add .
 git commit -m "first"
 git push
+
+git clone https://github.com/OmarBenhamida/CarDebateV2_Front.git
+
+Talismane.1997
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
