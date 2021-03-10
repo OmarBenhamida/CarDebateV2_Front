@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionService } from './Shared/session.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
