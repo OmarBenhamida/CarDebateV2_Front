@@ -23,9 +23,9 @@
               <div class="form-row mb-4">
                 <div class="col">
                   <!-- First name -->
-                  <label>ID : </label>
+                 <!-- <label>ID : </label>-->
                   <input type="text" [(ngModel)]="service.modele.id" name="id" class="form-control" [value]="id"
-                    placeholder="Id">
+                    placeholder="Id" hidden>
                 </div>
                 <div class="col">
                   <label>Modele : </label>
@@ -59,7 +59,7 @@
               </div>
             </div>
             <div class="col-6">
-              <div class="form-row mb-4">
+              <div class="form-row mb-4" style="margin-left: 20%;">
                 <div class="col">
                   <button class="btn btn-dark btn-rounded" block="true" (click)="submit()" type="submit"><i
                       class="far fa-plus-square"></i> Ajouter</button>
