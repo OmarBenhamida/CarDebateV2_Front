@@ -7,6 +7,8 @@ import { ComponentFixtureNoNgZone } from '@angular/core/testing';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { ModeleComponent } from './modele/modele.component';
+import { VersionComponent } from './version/version.component';
 
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
             { path: 'marq', component: MarqueComponent},
             { path: 'compt', component: ComparateurComponent },
             { path: 'promos', component: PromotionsComponent },
-            { path: 'Acts', component: ActualiteComponent }
+            { path: 'Acts', component: ActualiteComponent },
+            { path: 'Modele', component: ModeleComponent },
+            { path: 'version', component: VersionComponent },
 
 
            // { path: 'graph', loadChildren: () => import('./graph/graph.module').then(m => m.GraphModule)},  

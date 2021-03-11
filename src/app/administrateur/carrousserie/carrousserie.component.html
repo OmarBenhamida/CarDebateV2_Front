@@ -13,11 +13,11 @@
   <div style="  font-weight: bold;" class="bg-img">
     <div class="row">
       <div class="col-12">
-        <form ngForm="form" class="text-left ">
+        <form ngForm="form" class="text-left " style="margin-left: 9%;">
           <div class="row">
             <div class="col-6">
   
-              <p class="h4 mb-4 text-center">Gestion des Carrousseries</p>
+              <p class="h4 mb-4 text-center " style="padding-top: 5%;"> <b>Gestion des Carrousseries</b></p><br><br>
               <div class="form-row mb-4">
                 <div class="col">
                   <!-- First name -->
@@ -28,7 +28,7 @@
                 <div class="col">
                   <label>Carrousserie : </label>
                   <input type="text" [(ngModel)]="service.carousserie.name" name="name" class="form-control" [value]="name"
-                    placeholder="carrpusseries">
+                    placeholder="carrousserie">
   
                 </div>
               </div>
@@ -40,18 +40,18 @@
             <div class="col-6">
               <div class="form-row mb-4">
                 <div class="col">
-                  <button class="btn blue-gradient" block="true" (click)="submit()" type="submit"><i
+                  <button class="btn btn-dark btn-rounded" block="true" (click)="submit()" type="submit"><i
                       class="far fa-plus-square"></i> Ajouter</button>
                 </div>
                 <div class="col">
-                  <button class="btn dusty-grass-gradient" block="true" (click)="modifier()" type="submit"><i
+                  <button class="btn btn-dark btn-rounded" block="true" (click)="modifier()" type="submit"><i
                       class="fas fa-edit"></i> Editer</button>
                 </div>
   
               
   
                 <div class="col">
-                  <button class="btn purple-gradient" block="true" (click)="supprimer()" type="submit"><i
+                  <button class="btn btn-danger btn-rounded" block="true" (click)="supprimer()" type="submit"><i
                       class="fas fa-trash"></i> Supprimer</button>
                 </div>
 
