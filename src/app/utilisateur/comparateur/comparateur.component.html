@@ -1,3 +1,6 @@
+
+
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -8,13 +11,13 @@
 
             <br>
             <h3>Comparateur Voiture Neuve Maroc</h3>
-            <hr>
+            <hr class="rounded">
             <p>Vous êtes sur le point d'acheter une voiture neuve et vous ne savez pas laquelle choisir. Vous hésitez encore plusieurs marques ou modèles de voiture neuve...
                 Le comparateur wandaloo, un service intuitif et totalement gratuit, saura vous guider au bon choix !</p>
             
                 <div>
                     
-                    <hr class="rounded">  
+                    <hr class="">  
                     <div class="row">
                       <div class="col-sm-3 item empty">
                         <h2>1ére Voiture</h2>
@@ -24,7 +27,7 @@
                               <img src="https://www.wandaloo.com/imgs/comparateur-none.png" class="img-responsive" width="220">
                             </div>
                           </a>
-                          <button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalCenter">Choisir une voiture</button>              
+                          <a [routerLink]="['/utilisateur/compt']" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#basicModal">Choisir une voiture</a>              
                           <h3 style="text-align: center;">-</h3>
                         </div>
                         <hr>
@@ -104,7 +107,7 @@
                               <img src="https://www.wandaloo.com/imgs/comparateur-none.png" class="img-responsive" width="220">
                             </div>
                           </a>
-                          <button class="btn btn-dark btn-lg" data-id="1">Choisir une voiture</button>
+                          <a [routerLink]="['/utilisateur/compt']" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#basicModal">Choisir une voiture</a> 
                           <h3 style="text-align: center;">-</h3>
                         </div>
                         <hr>
@@ -184,7 +187,7 @@
                               <img src="https://www.wandaloo.com/imgs/comparateur-none.png" class="img-responsive" width="220">
                             </div>
                           </a>
-                          <button class="btn btn-dark btn-lg" data-id="1">Choisir une voiture</button>
+                          <a [routerLink]="['/utilisateur/compt']" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#basicModal">Choisir une voiture</a> 
                           <h3 style="text-align: center;">-</h3>
                         </div>
                         <hr>
@@ -264,7 +267,7 @@
                               <img src="https://www.wandaloo.com/imgs/comparateur-none.png" class="img-responsive" width="220">
                             </div>
                           </a>
-                          <button class="btn btn-dark btn-lg" data-id="1">Choisir une voiture</button>
+                          <a [routerLink]="['/utilisateur/compt']" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#basicModal">Choisir une voiture</a> 
                           <h3 style="text-align: center;">-</h3>
                         </div>
                         <hr>
@@ -360,6 +363,56 @@
                 </div>
             </div>
             </div>
+
+
+<!--Modal / pop up-->
+           
+            <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div style="margin-left: 40%;"><img src="https://1.bp.blogspot.com/-vCo0bRpCyg4/YEJNrvcBzwI/AAAAAAABxoo/Su7GNBtIbN0VixmnrhmMRGpkHOfCfmsCwCLcBGAsYHQ/w400-h400/logo.png"
+                      width="35%" height="20%"> </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5>Comparateur du neuf</h5>
+                    <hr class="rounded" style="width: 41%;margin-left: 0%;">
+
+                    <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                      <option value="0">:: MARQUE ::</option>
+                    <!--  <option value="1" *ngFor="let m of marques">
+                      {{m}}  
+                      </option>-->
+                      </select>
+                      &nbsp;
+                      <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                        <option value="0">:: Modele ::</option>
+                       <!-- <option value="1" *ngFor="let m of marques">
+                        {{m}}  
+                        </option>-->
+                        </select>
+                        &nbsp;
+                        <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                          <option value="0">:: VERSION ::</option>
+                        <!--  <option value="1" *ngFor="let m of marques">
+                          {{m}}  
+                          </option>-->
+                        </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-warning">Choisir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+<!-- the end of the mo-->
+
             
         </div>
         <div class="col">
