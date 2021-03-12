@@ -24,16 +24,23 @@ export class VersionService {
 
 
   get(id) {
-    return this.http.get(this.url + '/' + id);
+    return this.http.get<Version>(this.url + '/' + id);
 
   }
 
  
   getall() {
+    delete this.version.modele;
+
     return this.http.get(this.url + '/getAll');
 }
 
   post() {
+    delete this.version.modele;
+    delete this.version.carburant;
+    delete this.version.carousserie;
+    delete this.version.transmission;
+
     return this.http.post(this.url, this.version);
   }
 
@@ -43,6 +50,11 @@ export class VersionService {
 
   delete() {
     return this.http.delete(this.url + '/' + this.version.id);
+  }
+
+  getByModel(id){
+    return this.http.get<Version[]>(this.url + '/getByModel/' + id);
+  
   }
 
 }

@@ -68,7 +68,7 @@ export class Version {
     ecranTactile: boolean;
     instrumentationBordDigitale: boolean;
     reconnaissancePanneaux: boolean;
-    affichageTêteHaute: boolean;
+    affichageTeteHaute: boolean;
     aideStationnement: string;
     cameraRecul: boolean;
     parkAssistAuto: boolean;
@@ -100,7 +100,7 @@ export class Version {
     idmodel : number;
     idcarburant : number;
     idtransmission : number;
-    idcarrousserie : number;
+    idcarousserie  : number;
 
     modele: Modele;
     carburant: Carburant;

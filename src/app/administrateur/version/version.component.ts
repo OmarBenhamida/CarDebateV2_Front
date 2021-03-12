@@ -7,6 +7,7 @@ import { ModeleService } from 'src/app/Shared/modele.service';
 import { TransmissionService } from 'src/app/Shared/transmission.service';
 import { VersionService } from 'src/app/Shared/version.service';
 
+
 @Component({
   selector: 'app-version',
   templateUrl: './version.component.html',
@@ -76,7 +77,7 @@ export class VersionComponent implements OnInit {
   ecranTactile: boolean;
   instrumentationBordDigitale: boolean;
   reconnaissancePanneaux: boolean;
-  affichageTêteHaute: boolean;
+  affichageTeteHaute: boolean;
   aideStationnement: string;
   cameraRecul: boolean;
   parkAssistAuto: boolean;
@@ -108,130 +109,47 @@ export class VersionComponent implements OnInit {
   idmodel: number;
   idcarburant: number;
   idtransmission: number;
-  idcarrousserie: number;
+  idcarousserie : number;
 
 
   t = [];
 
-  constructor(public service: VersionService
-    , public uow2: CarburantService
-    , public uow3: CarousserieService
-    , public uow: ModeleService
-    , public uow1: TransmissionService
-    , private router: Router) { }
+  constructor(
+    public service: VersionService, 
+    public uow: ModeleService,
+    public uox: CarburantService,
+    public uoy: TransmissionService,
+    public uov: CarousserieService, 
+    private router: Router) { }
 
   ngOnInit(): void {
 
     this.service.version = {
 
-  id: 0,
-  name: null,
-  annee: 0,
-  prix: 0,
-  //moteur et trasmission
-  moteur: null,
-  architecture: 0,
-  cylindree: 0,
-  puissancefiscale: 0,
-  Puissancemaxi: 0,
-  coupleMaxi: 0,
-  boiteAvitesse: null,
-  // a reverfier le type
-  palettesAuvolant: null,
-  consVille: 0,
-  consRoute: 0,
-  consMixte: 0,
-  emissionCO2: 0,
-  vitessemaxi: 0,
-  acceleration: 0,
-  // Dimension et volumes
+   id: 0,name: null,annee: 0,prix: 0,
+   //moteur et trasmission
+   moteur: null,architecture: 0,cylindree: 0,puissancefiscale: 0,Puissancemaxi: 0,coupleMaxi: 0,boiteAvitesse: null,
+   // a reverfier le type
+   palettesAuvolant: null,consVille: 0,consRoute: 0,consMixte: 0,emissionCO2: 0,vitessemaxi: 0,acceleration: 0,
+   // Dimension et volumes
+   categorie: null,nbPlace: 0,poidsaVide: 0,longueur: 0,largeur: 0,hauteur: 0, empattement: 0,volumedureservoir: 0, volumedecoffre: 0,
+   // sécurité
+   airbag: 0, aBS: null,eSP: null,antipatinage: null,aideFreinageUrgence: null,antiDemarrageElectronique: null,aideDemarragEnCote: null,selecteurdemodedeconduite: null,detectionFatigue: null,systemeAlerteFranchissementLigne: null,detecteurAngleMort: null,detecteurSousGonflage: null, fermeturePortesEnRoulant: null,systemeAlarme: null,pharesAntibrouillard: null,preparationISOFIX: null,
+   //Confort: null,
+   climatisation: null, systemeaudio: null, ordinateurBord: null,startStop: null,regulateurVitesse: null,regulateurVitesseAdaptatif: null,detecteurPluie: null,allumageAutoFeux: null,freinMainElectrique: null,ecranTactile: null,instrumentationBordDigitale: null,reconnaissancePanneaux: null,affichageTeteHaute: null, aideStationnement: null, cameraRecul: null, parkAssistAuto: null, commandesVolant: null, volantReglable: null,vitresEblectriques: null,retroviseursElectriques: null,retroviseursRabattablesElectriquement: null, ouvertureAutoCoffre: null,demarrageMainslibres: null,siegesElectriques: null,banquetteArriereRabattable: null,gPS: null,connexionInternet: null,bluetooth: null,followmehome: null,
+   //Decor
+   Jantes: null, volantCuir: null, feuxJourLED: null, pharesLED: null, pharesXenon: null, vitresTeintee: null, sellerie: null,toit: null,barresToit: null,
+   idmodel: 0,idcarburant: 0,idtransmission: 0,idcarousserie : 0,
+ 
+   modele: null,carburant: null,transmission: null,carousserie: null
 
-  categorie: null,
-  nbPlace: 0,
-  poidsaVide: 0,
-  longueur: 0,
-  largeur: 0,
-  hauteur: 0,
-  empattement: 0,
-  volumedureservoir: 0,
-  volumedecoffre: 0,
-  // sécurité
-  airbag: 0,
-  // a reverifier le type
-  aBS: null,
-  eSP: null,
-  antipatinage: null,
-  aideFreinageUrgence: null,
-  antiDemarrageElectronique: null,
-  aideDemarragEnCote: null,
-  selecteurdemodedeconduite: null,
-  detectionFatigue: null,
-  systemeAlerteFranchissementLigne: null,
-  detecteurAngleMort: null,
-  detecteurSousGonflage: null,
-  fermeturePortesEnRoulant: null,
-  systemeAlarme: null,
-  pharesAntibrouillard: null,
-  preparationISOFIX: null,
-  //Confort: null,
-  climatisation: null,
-  systemeaudio: null,
-  ordinateurBord: null,
-  startStop: null,
-  regulateurVitesse: null,
-  regulateurVitesseAdaptatif: null,
-  detecteurPluie: null,
-  allumageAutoFeux: null,
-  freinMainElectrique: null,
-  ecranTactile: null,
-  instrumentationBordDigitale: null,
-  reconnaissancePanneaux: null,
-  affichageTêteHaute: null,
-  aideStationnement: null,
-  cameraRecul: null,
-  parkAssistAuto: null,
-  commandesVolant: null,
-  volantReglable: null,
-  vitresEblectriques: null,
-  retroviseursElectriques: null,
+    },
 
-  retroviseursRabattablesElectriquement: null,
-  ouvertureAutoCoffre: null,
-  demarrageMainslibres: null,
-  siegesElectriques: null,
-  banquetteArriereRabattable: null,
-  gPS: null,
-  connexionInternet: null,
-  bluetooth: null,
-
-  followmehome: null,
-  //Decor
-  Jantes: null,
-  volantCuir: null,
-  feuxJourLED: null,
-  pharesLED: null,
-  pharesXenon: null,
-  vitresTeintee: null,
-  sellerie: null,
-  toit: null,
-  barresToit: null,
-  idmodel: 0,
-  idcarburant: 0,
-  idtransmission: 0,
-  idcarrousserie: 0,
-
-  modele: null,
-  carburant: null,
-  transmission: null,
-  carousserie: null
-
- },
-
-      this.getall();
+    this.getall();
     this.uow.getall();
-    this.uow1.getall();
-    this.uow2.getall();
-    this.uow3.getall();
+    this.uov.getall();
+    this.uoy.getall();
+    this.uox.getall();
 
 
   }
@@ -346,9 +264,9 @@ export class VersionComponent implements OnInit {
     );
 
   }
+  
 
-
-
+  
 
   restaurertable() {
     this.getall();

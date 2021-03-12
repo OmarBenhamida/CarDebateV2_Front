@@ -1,1 +1,75 @@
 <p>version works!</p>
+
+<pre *ngIf="version">
+
+    {{version | json}}
+
+
+    <div class="cell c6" >
+        <h5 class="titre">Technique</h5>
+        <hr>
+        <ul>
+          <li>
+            <p class="p">Moteur</p>
+            <p class="v">{{version.name}}</p>
+          </li>
+          <li>
+            <p class="p">Energie</p>
+            <p class="v">{{version.prix}}</p>
+          </li>
+          <li>
+            <p class="p">Puiss. fiscale</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Puiss. maxi.</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Couple maxi.</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Boîte à vitesse</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Palettes volant</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Conso. ville</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Conso. route</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Conso. mixte</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Emission CO2</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Vitesse maxi.</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">0-100 km/h</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Réservoir</p>
+            <p class="v">-</p>
+          </li>
+          <li>
+            <p class="p">Coffre</p>
+            <p class="v">-</p>
+          </li>
+        </ul>
+      </div>
+
+</pre>

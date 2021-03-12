@@ -22,7 +22,7 @@ export class ModeleService {
   }
 
   getall() {
-    delete this.modele.marque;
+    //delete this.modele.marque;
 
     return this.http.get(this.url + '/getAll');
 }
@@ -40,5 +40,11 @@ export class ModeleService {
   delete() {
     return this.http.delete(this.url + '/' + this.modele.id);
   }
+
+getByMarque(id){
+  return this.http.get<Modele[]>(this.url + '/getByMarque/' + id);
+
+}
+
 
 }

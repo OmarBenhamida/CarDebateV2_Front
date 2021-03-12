@@ -28,7 +28,7 @@ const routes: Routes = [
             { path: 'promos', component: PromotionsComponent },
             { path: 'Acts', component: ActualiteComponent },
             { path: 'Modele', component: ModeleComponent },
-            { path: 'version', component: VersionComponent },
+            { path: 'version/:id', component: VersionComponent },
             { path: 'offres', component: OffresComponent },
             { path: 'offres/offre1', component: Offre1Component },
             { path: 'offres/offre2', component: Offre2Component },

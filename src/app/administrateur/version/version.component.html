@@ -1,1 +1,797 @@
-<p>version works!</p>
+<!-- <br>
+<h1>Gestion du carburant</h1>
+<div class="row g-3">
+  
+    <div class="col-sm-3">
+      <div class="form-outline">
+        <input type="text" id="form10Example3" class="form-control" />
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Default form register -->
+  <div style="  font-weight: bold;" class="bg-img">
+    <div class="row">
+      <div class="col-12">
+        <form ngForm="form" class="text-left " style="margin-left: 9%;">
+            <div class="col-6">
+  
+              <p class="h4 mb-4 text-center" style="padding-top: 5%;"><b>Gestion des Versions</b></p>
+              <br>
+                <div class="col">
+                  <!-- First name -->
+                  <label>ID : </label>
+                  <input type="text" [(ngModel)]="service.version.id" name="id" class="form-control" [value]="id"
+                    placeholder="Id">
+                </div>
+                <div class="col">
+                  <label>Version : </label>
+                  <input type="text" [(ngModel)]="service.version.name" name="name" class="form-control" [value]="name"
+                    placeholder="Version">
+  
+                </div>
+                 <!----> <div class="col">
+                    <!-- First name -->
+                    <label>Modele :</label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.idmodel" name="idmodel">
+                      <option value="0">...</option>
+                      <option *ngFor="let x of uow.modeles" [value]="x.id">{{ x.name}}</option>
+                    </select>
+    
+                  </div>
+     
+                   <!----> <div class="col">
+                    <!-- First name -->
+                    <label>Carrousserie :</label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.idcarousserie " name="idcarousserie ">
+                      <option value="0">...</option>
+                      <option *ngFor="let x of uov.carousseries" [value]="x.id">{{ x.name}}</option>
+                    </select>
+    
+                  </div>
+                          <!----> <div class="col">
+                    <!-- First name -->
+                    <label>Carburant :</label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.idcarburant" name="idcarburant">
+                      <option value="0">...</option>
+                      <option *ngFor="let x of uox.carburants" [value]="x.id">{{ x.name}}</option>
+                    </select>
+    
+
+                         <!----> <div class="col">
+                    <!-- First name -->
+                    <label>Transmission :</label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.idtransmission" name="idtransmission">
+                      <option value="0">...</option>
+                      <option *ngFor="let x of uoy.transmissions" [value]="x.id">{{ x.name}}</option>
+                    </select>
+    
+                  </div>
+
+                  <div class="col">
+                    <label>annee : </label>
+                    <input type="text" [(ngModel)]="service.version.annee" name="name" class="form-control" [value]="annee"
+                      placeholder="annee">
+    
+                  </div>
+                  <div class="col">
+                    <label>prix : </label>
+                    <input type="text" [(ngModel)]="service.version.prix" name="prix" class="form-control" [value]="prix"
+                      placeholder="prix">
+    
+                  </div>
+                  <div class="col">
+                    <label>moteur : </label>
+                    <input type="text" [(ngModel)]="service.version.moteur" name="moteur" class="form-control" [value]="moteur"
+                      placeholder="moteur">
+    
+                  </div>
+                  <div class="col">
+                    <label>architecture : </label>
+                    <input type="text" [(ngModel)]="service.version.architecture" name="architecture" class="form-control" [value]="architecture"
+                      placeholder="architecture">
+    
+                  </div>
+                  <div class="col">
+                    <label>cylindree : </label>
+                    <input type="text" [(ngModel)]="service.version.cylindree" name="cylindree" class="form-control" [value]="cylindree"
+                      placeholder="cylindree">
+    
+                  </div>
+
+                  <div class="col">
+                    <label>puissancefiscale : </label>
+                    <input type="text" [(ngModel)]="service.version.puissancefiscale" name="puissancefiscale" class="form-control" [value]="puissancefiscale"
+                      placeholder="puissancefiscale">
+    
+                  </div> <div class="col">
+                    <label>Puissancemaxi : </label>
+                    <input type="text" [(ngModel)]="service.version.Puissancemaxi" name="Puissancemaxi" class="form-control" [value]="Puissancemaxi"
+                      placeholder="Puissancemaxi">
+    
+                  </div> <div class="col">
+                    <label>coupleMaxi : </label>
+                    <input type="text" [(ngModel)]="service.version.coupleMaxi" name="coupleMaxi" class="form-control" [value]="coupleMaxi"
+                      placeholder="coupleMaxi">
+    
+                  </div> <div class="col">
+                    <label>boiteAvitesse : </label>
+                    <input type="text" [(ngModel)]="service.version.boiteAvitesse" name="boiteAvitesse" class="form-control" [value]="boiteAvitesse"
+                      placeholder="boiteAvitesse">
+    
+                  </div> <div class="col">
+                    <label>palettesAuvolant : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.palettesAuvolant" name="palettesAuvolant">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div> <div class="col">
+                    <label>consVille : </label>
+                    <input type="text" [(ngModel)]="service.version.consVille" name="consVille" class="form-control" [value]="consVille"
+                      placeholder="consVille">
+    
+                  </div> <div class="col">
+                    <label>consRoute : </label>
+                    <input type="text" [(ngModel)]="service.version.consRoute" name="consRoute" class="form-control" [value]="consRoute"
+                      placeholder="consRoute">
+    
+                  </div> <div class="col">
+                    <label>consMixte : </label>
+                    <input type="text" [(ngModel)]="service.version.consMixte" name="consMixte" class="form-control" [value]="consMixte"
+                      placeholder="consMixte">
+    
+                  </div> <div class="col">
+                    <label>emissionCO2 : </label>
+                    <input type="text" [(ngModel)]="service.version.emissionCO2" name="emissionCO2" class="form-control" [value]="emissionCO2"
+                      placeholder="emissionCO2">
+    
+                  </div> <div class="col">
+                    <label>vitessemaxi : </label>
+                    <input type="text" [(ngModel)]="service.version.vitessemaxi" name="vitessemaxi" class="form-control" [value]="vitessemaxi"
+                      placeholder="vitessemaxi">
+    
+                  </div>
+
+                  <div class="col">
+                    <label>acceleration : </label>
+                    <input type="text" [(ngModel)]="service.version.acceleration" name="acceleration" class="form-control" [value]="acceleration"
+                      placeholder="acceleration">
+    
+                  </div><div class="col">
+                    <label>categorie : </label>
+                    <input type="text" [(ngModel)]="service.version.categorie" name="categorie" class="form-control" [value]="categorie"
+                      placeholder="categorie">
+    
+                  </div><div class="col">
+                    <label>nbPlace : </label>
+                    <input type="text" [(ngModel)]="service.version.nbPlace" name="nbPlace" class="form-control" [value]="nbPlace"
+                      placeholder="nbPlace">
+    
+                  </div><div class="col">
+                    <label>poidsaVide : </label>
+                    <input type="text" [(ngModel)]="service.version.poidsaVide" name="poidsaVide" class="form-control" [value]="poidsaVide"
+                      placeholder="poidsaVide">
+    
+                  </div><div class="col">
+                    <label>longueur : </label>
+                    <input type="text" [(ngModel)]="service.version.longueur" name="longueur" class="form-control" [value]="longueur"
+                      placeholder="longueur">
+    
+                  </div><div class="col">
+                    <label>largeur : </label>
+                    <input type="text" [(ngModel)]="service.version.largeur" name="largeur" class="form-control" [value]="largeur"
+                      placeholder="largeur">
+    
+                  </div><div class="col">
+                    <label>hauteur : </label>
+                    <input type="text" [(ngModel)]="service.version.hauteur" name="hauteur" class="form-control" [value]="hauteur"
+                      placeholder="hauteur">
+    
+                  </div><div class="col">
+                    <label>empattement : </label>
+                    <input type="text" [(ngModel)]="service.version.empattement" name="empattement" class="form-control" [value]="empattement"
+                      placeholder="empattement">
+    
+                  </div><div class="col">
+                    <label>volumedureservoir : </label>
+                    <input type="text" [(ngModel)]="service.version.volumedureservoir" name="volumedureservoir" class="form-control" [value]="volumedureservoir"
+                      placeholder="volumedureservoir">
+    
+                  </div><div class="col">
+                    <label>volumedecoffre : </label>
+                    <input type="text" [(ngModel)]="service.version.volumedecoffre" name="volumedecoffre" class="form-control" [value]="volumedecoffre"
+                      placeholder="volumedecoffre">
+    
+                  </div><div class="col">
+                    <label>airbag : </label>
+                    <input type="text" [(ngModel)]="service.version.airbag" name="airbag" class="form-control" [value]="airbag"
+                      placeholder="airbag">
+    
+                  </div><div class="col">
+                    <label>aBS : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.aBS" name="aBS">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>eSP : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.eSP" name="eSP">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>antipatinage : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.antipatinage" name="antipatinage">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>aideFreinageUrgence : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.aideFreinageUrgence" name="aideFreinageUrgence">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>antiDemarrageElectronique : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.antiDemarrageElectronique" name="antiDemarrageElectronique">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>aideDemarragEnCote : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.aideDemarragEnCote" name="aideDemarragEnCote">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>selecteurdemodedeconduite : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.selecteurdemodedeconduite" name="selecteurdemodedeconduite">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>detectionFatigue : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.detectionFatigue" name="detectionFatigue">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>systemeAlerteFranchissementLigne : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.systemeAlerteFranchissementLigne" name="systemeAlerteFranchissementLigne">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>detecteurAngleMort : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.detecteurAngleMort" name="detecteurAngleMort">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>detecteurSousGonflage : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.detecteurSousGonflage" name="detecteurSousGonflage">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>fermeturePortesEnRoulant : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.fermeturePortesEnRoulant" name="fermeturePortesEnRoulant">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>systemeAlarme : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.systemeAlarme" name="systemeAlarme">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>pharesAntibrouillard : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.pharesAntibrouillard" name="pharesAntibrouillard">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>preparationISOFIX : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.preparationISOFIX" name="preparationISOFIX">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>climatisation : </label>
+                    <input type="text" [(ngModel)]="service.version.climatisation" name="climatisation" class="form-control" [value]="climatisation"
+                      placeholder="climatisation">
+    
+                  </div><div class="col">
+                    <label>systemeaudio : </label>
+                    <input type="text" [(ngModel)]="service.version.systemeaudio" name="systemeaudio" class="form-control" [value]="systemeaudio"
+                      placeholder="systemeaudio">
+    
+                  </div><div class="col">
+                    <label>ordinateurBord : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.ordinateurBord" name="ordinateurBord">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>startStop : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.startStop" name="startStop">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>regulateurVitesse : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.regulateurVitesse" name="regulateurVitesse">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>regulateurVitesseAdaptatif : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.regulateurVitesseAdaptatif" name="regulateurVitesseAdaptatif">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>detecteurPluie : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.detecteurPluie" name="detecteurPluie">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>allumageAutoFeux : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.allumageAutoFeux" name="allumageAutoFeux">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>ecranTactile : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.ecranTactile" name="ecranTactile">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>freinMainElectrique : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.freinMainElectrique" name="freinMainElectrique">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>instrumentationBordDigitale : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.instrumentationBordDigitale" name="instrumentationBordDigitale">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>reconnaissancePanneaux : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.reconnaissancePanneaux" name="reconnaissancePanneaux">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>affichageTêteHaute : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.affichageTeteHaute" name="affichageTeteHaute">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>aideStationnement : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.aideStationnement" name="aideStationnement">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>cameraRecul : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.cameraRecul" name="cameraRecul">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>parkAssistAuto : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.parkAssistAuto" name="parkAssistAuto">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>commandesVolant : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.commandesVolant" name="commandesVolant">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>volantReglable : </label>
+                    <input type="text" [(ngModel)]="service.version.volantReglable" name="volantReglable" class="form-control" [value]="volantReglable"
+                      placeholder="volantReglable">
+    
+                  </div><div class="col">
+                    <label>vitresEblectriques : </label>
+                    <input type="text" [(ngModel)]="service.version.vitresEblectriques" name="vitresEblectriques" class="form-control" [value]="vitresEblectriques"
+                      placeholder="vitresEblectriques">
+    
+                  </div><div class="col">
+                    <label>retroviseursElectriques : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.retroviseursElectriques" name="retroviseursElectriques">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>retroviseursRabattablesElectriquement : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.retroviseursRabattablesElectriquement" name="retroviseursRabattablesElectriquement">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>ouvertureAutoCoffre : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.ouvertureAutoCoffre" name="ouvertureAutoCoffre">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>demarrageMainslibres : </label>
+                       <select class="browser-default custom-select" [(ngModel)]="service.version.demarrageMainslibres" name="demarrageMainslibres">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  
+                  <div class="col">
+                    <label>siegesElectriques : </label>
+                    <input type="text" [(ngModel)]="service.version.siegesElectriques" name="siegesElectriques" class="form-control" [value]="siegesElectriques"
+                      placeholder="siegesElectriques">
+    
+                  </div>
+                  <div class="col">
+                    <label>banquetteArriereRabattable : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.banquetteArriereRabattable" name="banquetteArriereRabattable">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>gPS : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.gPS" name="gPS">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label>connexionInternet : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.connexionInternet" name="connexionInternet">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>bluetooth : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.bluetooth" name="bluetooth">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div><div class="col">
+                    <label>followmehome : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.followmehome" name="followmehome">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>Jantes : </label>
+                    <input type="text" [(ngModel)]="service.version.Jantes" name="Jantes" class="form-control" [value]="Jantes"
+                      placeholder="Jantes">
+    
+                  </div><div class="col">
+                    <label>volantCuir : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.volantCuir" name="volantCuir">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+                  </div><div class="col">
+                    <label>feuxJourLED : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.feuxJourLED" name="feuxJourLED">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+                  </div><div class="col">
+                    <label>pharesLED : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.pharesLED" name="pharesLED">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+                  </div><div class="col">
+                    <label>pharesXenon : </label>
+                        <select class="browser-default custom-select" [(ngModel)]="service.version.pharesXenon" name="pharesXenon">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+                  </div>
+
+                  <div class="col">
+                    <label>vitresTeintee : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.vitresTeintee" name="vitresTeintee">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>sellerie : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.sellerie" name="sellerie">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>toit : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.toit" name="toit">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+                  <div class="col">
+                    <label>barresToit : </label>
+                    <select class="browser-default custom-select" [(ngModel)]="service.version.barresToit" name="barresToit">
+                      <option selected>******</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+    
+    
+                    </select>
+    
+                  </div>
+
+              </div>
+  
+    
+  
+              </div>
+              <br> <br>     <br> <br>
+            <div class="col-6">
+              <div class="form-row mb-4">
+                <div class="col">
+                  <button class="btn btn-dark btn-rounded" block="true" (click)="submit()" type="submit"><i
+                      class="far fa-plus-square"></i> Ajouter</button>
+                      
+                </div>
+                <div class="col">
+                  <button class="btn btn-dark btn-rounded" block="true" (click)="modifier()" type="submit"><i
+                      class="fas fa-edit"></i> Editer</button>
+                </div>
+  
+              
+  
+                <div class="col">
+                  <button class="btn btn-danger btn-rounded" block="true" (click)="supprimer()" type="submit"><i
+                      class="fas fa-trash"></i> Supprimer</button>
+                </div>
+
+        
+              <br><br>
+       
+            </div>
+  
+          </div>
+        </form>
+  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <br> <br>
+        <br> <br>     <br> <br>     <br> <br>     <br> <br>     <br> <br>
+        <label>Liste Des versions : </label>
+  
+        <table class="tftable" border="1">
+          <tr>
+            <th class="table-active" scope="col">id</th>
+            <th class="table-active" scope="col">version</th>
+
+            <th class="table-active" scope="col">CC</th>
+
+            <th class="table-active" scope="col"></th>
+
+     
+          </tr>
+          <tr class="table-striped" *ngFor="let item of service.versions" (click)="filldata(item)">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.Puissancemaxi}}</td>
+            
+
+        
+            <td (click)="filldata2(item)"><i class="fas fa-eye"></i></td>
+  
+  
+          </tr>
+  
+        </table>
+  
+  
+      </div>
+      <div class="col-1"></div>
+  
+    </div>
+  </div>
+
+  

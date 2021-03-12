@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pays } from '../models/pays.models';
 import { Marque } from '../models/Marques.models';
+import { Version } from '../models/Versions.models';
 
 @Injectable({
     providedIn: 'root'
@@ -17,12 +18,12 @@ export class MarqueService {
 
 
     get(id) {
-        return this.http.get(this.url + '/' + id);
+        return this.http.get<Marque>(this.url + '/' + id);
 
     }
 
     getall() {
-        return this.http.get(this.url + '/getAll');
+        return this.http.get<Marque[]>(this.url + '/getAll');
     }
     
       

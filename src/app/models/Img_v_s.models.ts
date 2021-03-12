@@ -5,7 +5,7 @@ export class Img_v {
 
     id: number;
     imageUrl: string;
-  
+    idversion :number;
     version: Version;
 
 }

@@ -10,7 +10,7 @@ import { Img_v } from '../models/Img_v_s.models';
   providedIn: 'root'
 })
 export class Img_vService {
-  url = 'http://localhost:8000/api/img_vs';
+  url = 'http://localhost:8000/api/imgVs';
   img_vs: Img_v[];
   img_v: Img_v;
 
@@ -23,14 +23,13 @@ export class Img_vService {
   }
 
   getall() {
-    this.http.get(this.url).toPromise().then(
-      res => {
-        this.img_vs = res as Img_v[];
-      }
-    );
-  }
+    //delete this.modele.marque;
+
+    return this.http.get(this.url + '/getAll');
+}
 
   post() {
+    delete this.img_v.version;
     return this.http.post(this.url, this.img_v);
   }
 

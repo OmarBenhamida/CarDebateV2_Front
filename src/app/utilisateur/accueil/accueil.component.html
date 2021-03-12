@@ -67,29 +67,29 @@
                           <div style="text-align: center; ">
                           <form>
                             <div class="select" style="padding: 60px;" >
-                              <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                              <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" (change)="marqueChange($event)">
                               <option value="0">:: MARQUE ::</option>
-                            <!--  <option value="1" *ngFor="let m of marques">
-                              {{m}}  
-                              </option>-->
+                             <option [value]="e.id" *ngFor="let e of marques | async">
+                              {{e.name}}  
+                              </option>
                               </select>
                               <hr>
-                              <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                              <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" (change)="modeleChange($event)" >
                                 <option value="0">:: Modele ::</option>
-                               <!-- <option value="1" *ngFor="let m of marques">
-                                {{m}}  
-                                </option>-->
+                               <option [value]="e.id" *ngFor="let e of modeles">
+                                {{e.name}}  
+                                </option>
                                 </select>
                                 <hr>
-                                <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" >
+                                <select name="listeMarque" id="listeMarque" placeholder=":: MARQUE ::" (change)="recherche($event)" >
                                   <option value="0">:: VERSION ::</option>
-                                <!--  <option value="1" *ngFor="let m of marques">
-                                  {{m}}  
-                                  </option>-->
+                                 <option [value]="e.id" *ngFor="let e of versions">
+                                  {{e.name}}  
+                                  </option>
                                 </select>
-                                <br>
+                                <!-- <br>
                                   <hr>
-                                  <button class="btn btn-dark " type="submit">Recherche</button>
+                                  <button [routerLink]="['/utilisateur/version']" class="btn btn-dark " type="submit">Recherche</button> -->
                               </div>
                 
                               
