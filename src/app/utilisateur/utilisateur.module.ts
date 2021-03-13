@@ -21,7 +21,7 @@ import { Offre4Component } from './offres/offre4/offre4.component';
 
 
 @NgModule({
-  declarations: [AccueilComponent, UtilisateurComponent, ComparateurComponent, MarqueComponent, PromotionsComponent, ActualiteComponent, VersionComponent, ModeleComponent, OffresComponent, Offre1Component, Offre2Component, Offre3Component, Offre4Component],
+  declarations: [AccueilComponent, UtilisateurComponent, ComparateurComponent, MarqueComponent, PromotionsComponent, ActualiteComponent, ModeleComponent, VersionComponent, OffresComponent, Offre1Component, Offre2Component, Offre3Component, Offre4Component],
   imports: [
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
