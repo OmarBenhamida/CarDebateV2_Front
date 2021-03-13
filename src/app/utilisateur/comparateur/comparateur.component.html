@@ -12,7 +12,7 @@
       <p>Vous êtes sur le point d'acheter une voiture neuve et vous ne savez pas laquelle choisir. Vous hésitez encore
         plusieurs marques ou modèles de voiture neuve...
         Le comparateur wandaloo, un service intuitif et totalement gratuit, saura vous guider au bon choix !</p>
-        --{{carNumber}}--
+        
       <div>
 
         <hr class="">
@@ -27,72 +27,74 @@
               </a>
               <a (click)="carNumber = 1" class="btn btn-lg btn-dark" data-toggle="modal"
                 data-target="#basicModal">Choisir une voiture</a>
-              <h3 style="text-align: center;">-</h3>
+              <h3 style="text-align: center;"></h3>
             </div>
-            <hr>
+            
             <div class="cell c6" *ngIf="v1">
+              <h3 style="text-align: center; color: #ffad33; margin-left: 0.1%;">{{v1.name}}</h3>
+              <hr>
               <h5 class="titre">Technique</h5>
               <hr>
               <ul>
                 <li>
                   <p class="p">Moteur</p>
-                  <p class="v">{{v1.name}}</p>
+                  <p class="v">{{v1.moteur}}</p>
                 </li>
                 <li>
-                  <p class="p">Energie</p>
-                  <p class="v">-</p>
+                  <p class="p">Prix</p>
+                  <p class="v" style="color: blue;">{{v1.prix}}-DH</p>
                 </li>
                 <li>
                   <p class="p">Puiss. fiscale</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.puissancefiscale}}</p>
                 </li>
                 <li>
                   <p class="p">Puiss. maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.Puissancemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Couple maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.coupleMaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Boîte à vitesse</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.boiteAvitesse}}</p>
                 </li>
                 <li>
                   <p class="p">Palettes volant</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.palettesAuvolant}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. ville</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.Puissancemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. route</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.consVille}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. mixte</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Emission CO2</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.emissionCO2}}</p>
                 </li>
                 <li>
                   <p class="p">Vitesse maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.vitessemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">0-100 km/h</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.acceleration}}</p>
                 </li>
                 <li>
                   <p class="p">Réservoir</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.volumedureservoir}}</p>
                 </li>
                 <li>
                   <p class="p">Coffre</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v1.volumedecoffre}}</p>
                 </li>
               </ul>
             </div>
@@ -108,72 +110,74 @@
               </a>
               <a (click)="carNumber = 2" class="btn btn-lg btn-dark" data-toggle="modal"
                 data-target="#basicModal">Choisir une voiture</a>
-              <h3 style="text-align: center;">-</h3>
+              <h3></h3>
             </div>
-            <hr>
+            
             <div class="cell c6" *ngIf="v2">
+              <h3 style="text-align: center; color: #ffad33; margin-left: 0.1%;">{{v2.name}}</h3>
+              <hr>
               <h5 class="titre">Technique</h5>
               <hr>
               <ul>
                 <li>
                   <p class="p">Moteur</p>
-                  <p class="v">{{v2.name}}</p>
+                  <p class="v">{{v2.moteur}}</p>
                 </li>
                 <li>
-                  <p class="p">Energie</p>
-                  <p class="v">-</p>
+                  <p class="p">Prix</p>
+                  <p class="v" style="color: blue;">{{v2.prix}}-DH</p>
                 </li>
                 <li>
                   <p class="p">Puiss. fiscale</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.puissancefiscale}}</p>
                 </li>
                 <li>
                   <p class="p">Puiss. maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.Puissancemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Couple maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.coupleMaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Boîte à vitesse</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.boiteAvitesse}}</p>
                 </li>
                 <li>
                   <p class="p">Palettes volant</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.palettesAuvolant}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. ville</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.consVille}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. route</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. mixte</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Emission CO2</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.emissionCO2}}</p>
                 </li>
                 <li>
                   <p class="p">Vitesse maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.vitessemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">0-100 km/h</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.acceleration}}</p>
                 </li>
                 <li>
                   <p class="p">Réservoir</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.volumedureservoir}}</p>
                 </li>
                 <li>
                   <p class="p">Coffre</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v2.volumedecoffre}}</p>
                 </li>
               </ul>
             </div>
@@ -189,72 +193,74 @@
               </a>
               <a (click)="carNumber = 3" class="btn btn-lg btn-dark" data-toggle="modal"
                 data-target="#basicModal">Choisir une voiture</a>
-              <h3 style="text-align: center;">-</h3>
+              <h3 style="text-align: center;"></h3>
             </div>
-            <hr>
+            
             <div class="cell c6" *ngIf="v3">
+              <h3 style="text-align: center; color: #ffad33; margin-left: 0.1%;">{{v3.name}}</h3>
+              <hr>
               <h5 class="titre">Technique</h5>
               <hr>
               <ul>
                 <li>
                   <p class="p">Moteur</p>
-                  <p class="v">{{v3.name}}</p>
+                  <p class="v">{{v3.moteur}}</p>
                 </li>
                 <li>
-                  <p class="p">Energie</p>
-                  <p class="v">-</p>
+                  <p class="p">Prix</p>
+                  <p class="v" style="color: blue;">{{v3.prix}}-DH</p>
                 </li>
                 <li>
                   <p class="p">Puiss. fiscale</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.puissancefiscale}}</p>
                 </li>
                 <li>
                   <p class="p">Puiss. maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.Puissancemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Couple maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.coupleMaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Boîte à vitesse</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.boiteAvitesse}}</p>
                 </li>
                 <li>
                   <p class="p">Palettes volant</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.palettesAuvolant}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. ville</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.consVille}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. route</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. mixte</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Emission CO2</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.emissionCO2}}</p>
                 </li>
                 <li>
                   <p class="p">Vitesse maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.vitessemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">0-100 km/h</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.acceleration}}</p>
                 </li>
                 <li>
                   <p class="p">Réservoir</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.volumedureservoir}}</p>
                 </li>
                 <li>
                   <p class="p">Coffre</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v3.volumedecoffre}}</p>
                 </li>
               </ul>
             </div>
@@ -270,72 +276,74 @@
               </a>
               <a (click)="carNumber = 4" class="btn btn-lg btn-dark" data-toggle="modal"
                 data-target="#basicModal">Choisir une voiture</a>
-              <h3 style="text-align: center;">-</h3>
+              <h3 style="text-align: center;"></h3>
             </div>
-            <hr>
+            
             <div class="cell c6" *ngIf="v4">
+              <h3 style="text-align: center; color: #ffad33; margin-left: 0.1%;">{{v4.name}}</h3>
+              <hr>
               <h5 class="titre">Technique</h5>
               <hr>
               <ul>
                 <li>
                   <p class="p">Moteur</p>
-                  <p class="v">{{v4.name}}</p>
+                  <p class="v">{{v4.moteur}}</p>
                 </li>
                 <li>
-                  <p class="p">Energie</p>
-                  <p class="v">-</p>
+                  <p class="p">Prix</p>
+                  <p class="v" style="color: blue;">{{v4.prix}}-DH</p>
                 </li>
                 <li>
                   <p class="p">Puiss. fiscale</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.puissancefiscale}}</p>
                 </li>
                 <li>
                   <p class="p">Puiss. maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.Puissancemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Couple maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.coupleMaxi}}</p>
                 </li>
                 <li>
                   <p class="p">Boîte à vitesse</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.boiteAvitesse}}</p>
                 </li>
                 <li>
                   <p class="p">Palettes volant</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.palettesAuvolant}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. ville</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.consVille}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. route</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Conso. mixte</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.consRoute}}</p>
                 </li>
                 <li>
                   <p class="p">Emission CO2</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.emissionCO2}}</p>
                 </li>
                 <li>
                   <p class="p">Vitesse maxi.</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.vitessemaxi}}</p>
                 </li>
                 <li>
                   <p class="p">0-100 km/h</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.acceleration}}</p>
                 </li>
                 <li>
                   <p class="p">Réservoir</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.volumedureservoir}}</p>
                 </li>
                 <li>
                   <p class="p">Coffre</p>
-                  <p class="v">-</p>
+                  <p class="v">{{v4.volumedecoffre}}</p>
                 </li>
               </ul>
             </div>
